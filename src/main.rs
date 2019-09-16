@@ -3,6 +3,7 @@
 // use std::cmp::Ordering;
 mod print;
 mod vars;
+mod person;
 
 fn main() {
     println!("Print chapter:");
@@ -42,6 +43,9 @@ fn main() {
     // Closure
     let multiply = |x: i32, y: i32| x * y;
     println!("Multiply 5 x 9 = {}", multiply(5, 9));
+
+    // Let's run the person run function
+    person::run();
 }
 
 fn add(x: i32, y: i32) -> i32{

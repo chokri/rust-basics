@@ -53,3 +53,16 @@ pub fn run() {
     println!("Testing bcrypt given easypassword is {:?}", verify_password("easypassword", hashed));
     println!("Testing bcrypt given falspassword is {:?}", verify_password("falspassword", hashed));
 }
+
+#[test]
+pub fn test_create_person() {
+    let mut person = Person::new("Chuck", "Norris", "male", 38);
+    assert_eq!(person.fist_name, "Chuck");
+    assert_eq!(person.last_name, "Norris");
+}
+
+#[test]
+pub fn test_create_account() {
+    let account = &Account::new("test@account.com", "easypassword", "", "main_app");
+    assert_eq!(account.email, "test@account.com");
+}

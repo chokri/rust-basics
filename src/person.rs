@@ -16,6 +16,7 @@ impl Person {
             age
         }
     }
+    #[warn(dead_code)]
     fn full_name (&self) -> String {
         format!("{} {}", self.fist_name, self.last_name)
     }
@@ -45,7 +46,7 @@ fn verify_password (password: &str, hashed_password: &str) -> bool {
 }
 pub fn run() {
     // Create a new Person
-    let mut person = Person::new("Chuck", "Norris", "male", 38);
+    let person = Person::new("Chuck", "Norris", "male", 38);
     let account = &Account::new("test@account.com", "easypassword", "", "main_app");
     println!("Person {:?}", (person.fist_name, person.last_name, person.gender, person.age));
     println!("Account {:?}", (&account.email, &account.password, &account.token, &account.login_from));
@@ -56,7 +57,7 @@ pub fn run() {
 
 #[test]
 pub fn test_create_person() {
-    let mut person = Person::new("Chuck", "Norris", "male", 38);
+    let person = Person::new("Chuck", "Norris", "male", 38);
     assert_eq!(person.fist_name, "Chuck");
     assert_eq!(person.last_name, "Norris");
 }

@@ -12,13 +12,14 @@ Tuples
 Arrays
 */
 pub fn run (){
-    let name = "chokri";
-    let age = 34; // We can't change this
-    let year = 2019; // This can be changed
+    let _name = "chokri";
+    let _age = 34; // We can't change this
+    let _year = 2019; // This can be changed
     const PI: f32 = 3.14 ;
     println!("PI: {:?}", PI);
     // Assign multiple varis
-    let (sport, activity) = ("Basketball", "Playing");
+    let (_sport, _activity) = ("Basketball", "Playing");
+    println!("{:?} {:?}", _activity, _sport);
     // Maximum value of i32?
     println!("Max of i32 is {}", std::i32::MAX);
 

@@ -1,6 +1,3 @@
-// use std::io;
-// use rand::Rng;
-// use std::cmp::Ordering;
 mod print;
 mod vars;
 mod person;
@@ -46,6 +43,7 @@ fn main() {
 
     // Let's run the person run function
     person::run();
+
 }
 
 fn add(x: i32, y: i32) -> i32{

@@ -8,4 +8,4 @@ edition = "2018"
 
 [dependencies]
 rand = "0.8.4"
-bcrypt = "0.10"
+bcrypt = "0.13"
